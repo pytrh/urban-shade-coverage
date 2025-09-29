@@ -1,10 +1,3 @@
-+++
-title = "Applied Algorithmics Project M2 (2025–2026) – Evapotranspiration and Urban Heat Islands"
-template = "course.html"
-lang = "en"
-+++
-
-
 ## General Overview
 
 Once again this year, the university campus has been severely affected by heat waves. Fortunately, existing trees and green spaces have helped users better withstand the high temperatures. To further mitigate these effects, the university would like to strategically plant additional trees so that all frequently used areas benefit from their cooling effect. However, trees cannot be planted on paved or concrete surfaces, where they must instead be replaced with parasols, which are less effective. Paved areas also reflect heat, which reduces the spread of cooling.
