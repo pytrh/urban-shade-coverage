@@ -1,40 +1,47 @@
 +++
-title = "Applied Algorithmics Project M2 (2025-2026) – Evapotranspiration versus Urban Heat Islands."
+title = "Applied Algorithmics Project M2 (2025–2026) – Evapotranspiration and Urban Heat Islands"
 template = "course.html"
 lang = "en"
 +++
 
 
-## General Presentation
+## General Overview
 
-This year again, heat waves have hit the university campus hard. Fortunately, the trees and green spaces helped users withstand the temperature. To further improve the situation, the university would like to plant trees so that all the areas used are covered by their cooling effect. However, trees cannot be planted in paved/concrete areas, where they must be replaced with parasols, which are less effective. Paved areas also reflect heat, which further limits the spread of coolness.
+Once again this year, the university campus has been severely affected by heat waves. Fortunately, existing trees and green spaces have helped users better withstand the high temperatures. To further mitigate these effects, the university would like to strategically plant additional trees so that all frequently used areas benefit from their cooling effect. However, trees cannot be planted on paved or concrete surfaces, where they must instead be replaced with parasols, which are less effective. Paved areas also reflect heat, which reduces the spread of cooling.
 
-The project will take place in several steps:
+The project will be organized in several stages:
 
- 1. modeling of the problem;  
- 2. implementation of algorithms (brute force, etc.);  
- 3. adding extensions.  
+1. formal modeling of the problem;  
+2. algorithmic implementations (brute force, etc.);  
+3. proposed extensions and improvements.  
 
- Regarding organization:
- 
- * groups of 3 or 4 students;  
- * the final version must be submitted before the Christmas holidays, and oral defenses will take place in January;  
- * intermediate submissions will also be required.  
+### Organization
 
-## Problem
+* Work in groups of 3–4 students.  
+* The final submission is due before the Christmas holidays; oral defenses will take place in January.  
+* Intermediate deliverables will be required.  
 
-We propose the following problem: How can trees be placed so that all of the campus areas in use (sidewalks, etc.) are covered by shade? What is the minimal number of trees to place in order to cover these areas?  
+---
 
-In a second stage, you will consider related problems with parasols and with variations in the distance covered depending on the type of terrain.  
+## Problem Statement
 
-You may also propose your own variants of the problem, provided you justify why they are relevant.  
+The main problem is as follows:  
+**How can trees be positioned so that all functional areas of the campus (e.g., sidewalks) are shaded? What is the minimum number of trees required to achieve complete coverage?**
 
-You will present your results graphically in order to make them easier to understand.  
+In a second stage, you will extend the model to account for parasols and for variations in shade distance depending on the type of terrain.  
+
+You may also propose your own variants of the problem, provided that you justify their relevance.  
+
+Results should be presented graphically to facilitate understanding and interpretation.  
+
+---
 
 ## Data
 
-To carry out the project, you will need cartographic data of the campus. These can be obtained via OpenStreetMap, for example by using [overpass](https://overpass-turbo.eu/) queries. You may also use other open sources that you find. [osmnx](https://osmnx.readthedocs.io/en/stable/) could also be useful if you choose to do your project in Python.  
+To complete the project, you will need cartographic data for the campus. These can be obtained from OpenStreetMap, for example using [Overpass](https://overpass-turbo.eu/) queries. You may also rely on other open data sources. The Python library [osmnx](https://osmnx.readthedocs.io/en/stable/) could also be useful if you choose to implement your project in Python.  
 
-## For October 2
+---
 
-Each group will prepare a short presentation of the modeling. The tools chosen for the implementation will also be presented.
+## Deliverable for October 2
+
+Each group will prepare a short presentation outlining their chosen modeling approach, as well as the tools they plan to use for implementation.
