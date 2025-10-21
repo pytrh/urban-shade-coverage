@@ -21,7 +21,6 @@ usable_areas = uni_gdf.copy()
 bpoly = buildings[buildings.geom_type.isin(["Polygon","MultiPolygon"])].union_all()
 mask_gdf = gpd.GeoDataFrame(geometry=[bpoly], crs="EPSG:3035")
 usable_areas = uni_gdf.overlay(mask_gdf, how="difference")
-# random_trees = usable_areas.sample_points(200)
 
 # --- iterative sampling until coverage ---
 remaining = usable_areas.copy()
@@ -56,21 +55,12 @@ while not remaining.empty and i < max_iters:
 random_trees_gdf = gpd.GeoDataFrame(geometry=gpd.GeoSeries(random_trees_list), crs=usable_areas.crs)
 tree_buffers_gdf = gpd.GeoDataFrame(geometry=random_trees_gdf.buffer(radius_tree), crs=usable_areas.crs)
 
-# random_trees['geometry'] = random_trees.buffer(10)
-
-
 # --- plotting ---
 fig, ax = plt.subplots(figsize=(10,10))
 
 uni_gdf.plot(ax=ax, facecolor="none", edgecolor="crimson", linewidth=2, label="Campus")
 if not usable_areas.empty:
     usable_areas.plot(ax=ax, color="limegreen", alpha=0.35, label="Usable areas")
-
-# convert to a GeoDataFrame if needed (works whether random_trees is a GeoSeries or not)
-# random_trees_gdf = gpd.GeoDataFrame(geometry=random_trees, crs=usable_areas.crs)
-
-# tree_buffers = random_trees_gdf.buffer(10)  # 10 m since EPSG:3035 is in meters
-# tree_buffers_gdf = gpd.GeoDataFrame(geometry=tree_buffers, crs=usable_areas.crs)
 
 # plot buffers first so points are visible on top
 tree_buffers_gdf.plot(ax=ax, facecolor="none", edgecolor="darkgreen", linewidth=1, alpha=0.7, label=f"Tree buffer ({radius_tree} m)")
